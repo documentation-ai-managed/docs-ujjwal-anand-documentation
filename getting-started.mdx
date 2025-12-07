@@ -1,0 +1,127 @@
+---
+title: Getting Started
+description: Step-by-step guide to set up and begin using Ujjwal Anand Documentation
+---
+
+## Overview
+
+Setting up your documentation space is straightforward with Ujjwal Anand Documentation. This guide walks you through the initial configuration, basic navigation, and first content creation. Follow these steps to transform your project documentation into a professional, organized resource.
+
+<Steps>
+  <Step title="Create Your Space" icon="plus">
+    Begin by initializing your documentation repository. This establishes the foundation for your content structure.
+
+    <CodeGroup tabs="Terminal,Web Interface">
+      ```bash
+git clone https://github.com/ujjwal/documentation-template.git
+cd documentation-template
+npm install
+```
+      ```javascript
+// Web setup via dashboard
+import { createDocs } from 'ujjwal-docs';
+
+const docs = createDocs({
+  name: 'My Documentation',
+  theme: 'default'
+});
+```
+    </CodeGroup>
+  </Step>
+  <Step title="Configure Navigation" icon="settings">
+    Set up your navigation structure using tabs and groups. Organize content logically for better user experience.
+  </Step>
+  <Step title="Add Your First Page" icon="file-text">
+    Create an introduction page with key features and navigation cards. Use components like Columns and Cards for visual appeal.
+  </Step>
+  <Step title="Integrate APIs" icon="api">
+    If you have APIs, add OpenAPI specifications for automatic documentation generation.
+  </Step>
+</Steps>
+
+## Navigation Structure
+
+Ujjwal Anand Documentation uses a flexible tab-based navigation system. You can organize content into logical groups and subgroups for easy access.
+
+<Tabs>
+  <Tab title="Basic Setup" icon="home">
+    Start with a simple structure: Introduction, Getting Started, and API Reference tabs.
+
+    <Expandable title="Navigation Best Practices" default-open="false">
+      Use descriptive tab names and group content by user journey rather than technical categories.
+    </Expandable>
+  </Tab>
+  <Tab title="Advanced Organization" icon="layers">
+    For complex projects, consider using nested groups and expandable sections.
+
+    <Callout kind="tip">
+      Keep navigation shallow - users should find content within 2-3 clicks.
+    </Callout>
+  </Tab>
+</Tabs>
+
+## Component Usage
+
+Master the component system to create engaging documentation. Each page should use at least 5-8 different component types for comprehensive coverage.
+
+<Columns cols={2}>
+  <Card title="Visual Components" icon="image" href="#">
+    Cards, columns, and tabs enhance visual appeal and organization.
+  </Card>
+  <Card title="Instructional Elements" icon="book-open" href="#">
+    Steps and code blocks provide clear, actionable guidance.
+  </Card>
+  <Card title="Supporting Content" icon="info" href="#">
+    Callouts and expandable sections add context and details.
+  </Card>
+  <Card title="Interactive Features" icon="play" href="#">
+    Code groups and expandable groups engage users actively.
+  </Card>
+</Columns>
+
+## Content Guidelines
+
+<ExpandableGroup>
+  <Expandable title="Writing Style" default-open="true">
+    Write in active voice, present tense, using second person. Define terms immediately for self-contained pages.
+  </Expandable>
+  <Expandable title="Code Examples" default-open="false">
+    Include realistic code examples with proper syntax highlighting. Use CodeGroup for multi-language examples.
+  </Expandable>
+  <Expandable title="Special Characters" default-open="false">
+    Wrap special characters like `<`, `>`, `{`, `}` in backticks when they appear in prose.
+  </Expandable>
+</ExpandableGroup>
+
+## Troubleshooting
+
+<Callout kind="alert">
+  If you encounter YAML parsing errors in frontmatter, ensure there are no blank lines between title and description fields.
+</Callout>
+
+Common issues include:
+
+- Frontmatter formatting errors
+- Missing component closing tags
+- Incorrect code block backtick counts
+- Unescaped special characters in text
+
+<Steps>
+  <Step title="Check Frontmatter" icon="search">
+    Verify frontmatter has no blank lines and proper YAML syntax.
+  </Step>
+  <Step title="Validate Components" icon="check-circle">
+    Ensure all JSX tags are properly closed and nested.
+  </Step>
+  <Step title="Test Code Blocks" icon="terminal">
+    Confirm backtick counts match for opening and closing fences.
+  </Step>
+</Steps>
+
+## Next Steps
+
+With your documentation space configured, explore advanced features like API integration and custom theming. Ujjwal Anand Documentation grows with your needs, providing tools for professional technical communication.
+
+<Callout kind="success">
+  You've successfully set up your documentation foundation. Continue building comprehensive guides that showcase your expertise.
+</Callout>
